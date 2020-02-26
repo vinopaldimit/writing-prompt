@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous|Roboto');
+
+*{
+
+}
+
+:root {
+	--background: #333;
+	--pink: #ED9A9A;
+	--shadow: #111;
+	--white: #fff;
+}
+
+a{
+	color: var(--pink);
+}
+
+body{
+	background-color: var(--background);
+	color: var(--white);
+	font-family: Roboto;
+}
+
+button {
+	padding: .5em 1em;
+	background-color: var(--pink);
+	border: solid var(--shadow) 1px;
+}
+
+footer{
+	font-size: .8em;
+}
+
+header{
+	color: var(--pink);
+	font-family: Righteous;
+	text-shadow: 2px 2px var(--shadow);
+	text-align: center;
+}
+
+img{
+	border: solid var(--shadow) 3px;
+}
