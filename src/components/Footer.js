@@ -14,6 +14,7 @@ class Footer extends Component {
         		<div>
         			<p>Loading gif made with <a href="https://loading.io/">loading.io</a> using their free license.</p>
         			<p><a href="https://picsum.photos/">Lorem Picsum API</a> used to generate picture prompts.</p>
+                    <p><a href="https://random-word-api.herokuapp.com/home">Random Word API</a> used to generate text prompts.</p>
         		</div>
         	</footer>
         );

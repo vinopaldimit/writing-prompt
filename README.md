@@ -8,3 +8,4 @@ The app calls an API that returns an image that can be used as a writing prompt.
 
 Loading gif made with [loading.io](https://loading.io/) using their free license.
 [Lorem Picsum API](https://picsum.photos/) used to generate picture prompts.
+[Random Word API](https://random-word-api.herokuapp.com/home) used to generate text prompts.
