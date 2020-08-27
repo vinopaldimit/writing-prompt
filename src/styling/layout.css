@@ -31,6 +31,19 @@ img{
 	max-width: 400px;
 }
 
+#promptContainer{
+	height: 224px;
+	width: 224px;
+	position: relative;
+}
+
+#promptContainer p, #promptContainer figcaption {
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+}
+
 input{
 	margin: .5em 1em .5em 0em;
 }
@@ -60,6 +73,11 @@ label{
 	img{
 		height: 400px;
 		width: 400px;
+	}
+
+	#promptContainer{
+		height: 416px;
+		width: 416px;
 	}
 
 	@supports (display: grid) {

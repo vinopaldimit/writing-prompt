@@ -53,15 +53,17 @@ class Main extends Component {
         return (
         	<main>
         		<section>
-        			{this.state.selectedPromptType === 'picture' ? 
-        				<figure><img src={this.state.picturePrompt} alt="Prompt"  /></figure> : <p></p>
-        			}
-        			{this.state.selectedPromptType === 'text' ? 
-        				<p>{this.state.textPrompt}</p> : <p></p>
-        			}
-        			{this.state.selectedPromptType === 'both' ? 
-        				<figure><img src={this.state.picturePrompt} alt="Prompt"  /> <figcaption>{this.state.textPrompt}</figcaption></figure> : <p></p>
-        			}
+        			<div id="promptContainer">
+	        			{this.state.selectedPromptType === 'picture' ? 
+	        				<figure><img src={this.state.picturePrompt} alt="Prompt"  /></figure> : <p></p>
+	        			}
+	        			{this.state.selectedPromptType === 'text' ? 
+	        				<p>{this.state.textPrompt}</p> : <p></p>
+	        			}
+	        			{this.state.selectedPromptType === 'both' ? 
+	        				<figure><img src={this.state.picturePrompt} alt="Prompt"  /> <figcaption>{this.state.textPrompt}</figcaption></figure> : <p></p>
+	        			}
+        			</div>
 	        		<div>
 	        			<p>Write something based off of this prompt!</p>
 

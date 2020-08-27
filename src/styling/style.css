@@ -52,8 +52,21 @@ img{
 	border: solid var(--shadow) 3px;
 }
 
+#promptContainer p, #promptContainer figcaption {
+	font-family: Righteous;
+	font-size: 2em;
+}
+
+/*#promptContainer figcaption{
+	opacity: 0.9;
+}*/
+
 @media only screen and (min-width: 550px) {
 	h1{
 		font-size: 2em;
+	}
+
+	#promptContainer p, #promptContainer figcaption {
+		font-size: 3em;
 	}
 }
