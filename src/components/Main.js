@@ -8,10 +8,12 @@ class Main extends Component {
 		this.state = {
 			picturePrompt: loading,
 			textPrompt: '',
-			selectedPromptType: 'picture'
+			selectedPromptType: 'picture',
+			submittedPromptType: 'picture'
 		}
-		this.handleFetchPicture = this.handleFetchPicture.bind(this);
+		this.handleFetch = this.handleFetch.bind(this);
 		this.handlePromptTypeChange = this.handlePromptTypeChange.bind(this);
+		// this.handleSubmit = this.handleSubmit.bind(this);
 		this.fetchPicture()
 		this.fetchText()
 	}
@@ -33,7 +35,9 @@ class Main extends Component {
 		})
 	}
 
-	handleFetchPicture() {
+	handleFetch() {
+		this.setState({picturePrompt: loading})
+		this.setState({textPrompt: ''})
 		if(this.state.selectedPromptType === 'picture' || this.state.selectedPromptType === 'both')
 		{
 			this.fetchPicture()
@@ -45,7 +49,13 @@ class Main extends Component {
 	}
 
 	handlePromptTypeChange(event) {
-	  this.setState({selectedPromptType: event.target.value})
+		this.setState({selectedPromptType: event.target.value})
+	}
+
+	handleSubmit = event => {
+		event.preventDefault();
+		this.handleFetch()
+		this.setState({submittedPromptType: this.state.selectedPromptType})
 	}
 
 
@@ -54,20 +64,20 @@ class Main extends Component {
         	<main>
         		<section>
         			<div id="promptContainer">
-	        			{this.state.selectedPromptType === 'picture' ? 
+	        			{this.state.submittedPromptType === 'picture' ? 
 	        				<figure><img src={this.state.picturePrompt} alt="Prompt"  /></figure> : <p></p>
 	        			}
-	        			{this.state.selectedPromptType === 'text' ? 
+	        			{this.state.submittedPromptType === 'text' ? 
 	        				<p>{this.state.textPrompt}</p> : <p></p>
 	        			}
-	        			{this.state.selectedPromptType === 'both' ? 
+	        			{this.state.submittedPromptType === 'both' ? 
 	        				<figure><img src={this.state.picturePrompt} alt="Prompt"  /> <figcaption>{this.state.textPrompt}</figcaption></figure> : <p></p>
 	        			}
         			</div>
 	        		<div>
 	        			<p>Write something based off of this prompt!</p>
 
-	        			<form>
+	        			<form onSubmit={this.handleSubmit}>
 				        	<label>
 				            	<input type="radio" value="picture" checked={this.state.selectedPromptType === 'picture'} 
 	                  			onChange={this.handlePromptTypeChange} />
@@ -83,9 +93,8 @@ class Main extends Component {
 	                  			onChange={this.handlePromptTypeChange} />
 				            	picture & text
 				          	</label>
+				          	<button type="submit">New Prompt</button>
 					    </form>
-
-					    <button onClick={this.handleFetchPicture}>New Prompt</button>
 	        		</div>
         		</section>
         	</main>
