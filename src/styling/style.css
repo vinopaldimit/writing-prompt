@@ -57,9 +57,11 @@ img{
 	font-size: 2em;
 }
 
-/*#promptContainer figcaption{
+#promptContainer figcaption{
 	opacity: 0.9;
-}*/
+	background-color: #111;
+	padding: .2rem;
+}
 
 @media only screen and (min-width: 550px) {
 	h1{
@@ -68,5 +70,9 @@ img{
 
 	#promptContainer p, #promptContainer figcaption {
 		font-size: 3em;
+	}
+
+	#promptContainer figcaption{
+		padding: .2rem 1rem .2rem 1rem;
 	}
 }
