@@ -75,7 +75,7 @@ class Main extends Component {
 	        			}
         			</div>
 	        		<div>
-	        			<p>Write something based off of this prompt!</p>
+	        			<p>Choose what type of prompt you want:</p>
 
 	        			<form onSubmit={this.handleSubmit}>
 				        	<label>

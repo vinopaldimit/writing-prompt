@@ -52,6 +52,10 @@ img{
 	border: solid var(--shadow) 3px;
 }
 
+main{
+	font-size: 1.2em;
+}
+
 #promptContainer p, #promptContainer figcaption {
 	font-family: Righteous;
 	font-size: 2em;
@@ -61,6 +65,10 @@ img{
 	opacity: 0.9;
 	background-color: #111;
 	padding: .2rem;
+}
+
+main button{
+	margin-top: 1em;
 }
 
 @media only screen and (min-width: 550px) {
